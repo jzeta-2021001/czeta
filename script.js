@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cambiar enlace del CV
     const cvLink = document.getElementById('cvLink');
     if (cvLink) {
-      cvLink.href = lang === 'en' ? './assets/docs/CV_2021001_EN.pdf' : './assets/docs/CV_2021001.pdf';
+      cvLink.href = lang === 'en' ? './assets/docs/CV_CarlosZeta_EN.pdf' : './assets/docs/CV_CarlosZeta.pdf';
     }
   };
 
