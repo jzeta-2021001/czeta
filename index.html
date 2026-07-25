@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Zeta | Desarrollador</title>
+  <meta name="description" content="Portafolio de Carlos Zeta, Desarrollador Web Freelance especializado en aplicaciones eficientes y de alto rendimiento.">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Carlos Zeta | Desarrollador Web Freelance">
+  <meta property="og:description" content="Portafolio de Carlos Zeta, Desarrollador Web especializado en aplicaciones de alto rendimiento y UX.">
+  <meta property="og:image" content="./assets/img/logoCZ.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logoCZ.png">
+
+  <!-- Google Fonts: Playfair Display (display) + Inter (body/utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (para íconos de redes y flechas) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Devicon para íconos de lenguajes -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== LUZ DE FONDO ==================== -->
+  <div id="backgroundGlow" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0; background: radial-gradient(600px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(255, 255, 255, 0.04), transparent 40%);"></div>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span id="preloader-name" class="preloader-name"></span>
+      <span class="preloader-cursor-blink">_</span>
+      <div class="preloader-rule" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- ==================== CURSOR PERSONALIZADO ==================== -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
+  <!-- ==================== SKIP LINK (ACCESIBILIDAD) ==================== -->
+  <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" aria-label="Navegación principal">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand brand-mark" href="#inicio" style="display: flex; align-items: center; gap: 12px; font-size: 1.5rem;">
+        <img src="./assets/img/logoCZ.png" alt="Logo Carlos Zeta" style="height: 45px; width: auto; object-fit: contain;">
+        <span>Carlos Zeta</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-en="About me">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades" data-en="Skills">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trayectoria" data-en="Experience">Trayectoria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos" data-en="Projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-cta" href="#contacto" data-en="Contact">Contacto</a></li>
+          
+          <li class="nav-item d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 gap-3">
+            <button id="themeToggle" class="btn btn-link nav-link p-0 border-0" aria-label="Cambiar tema" style="font-size: 1.1rem;">
+              <i class="bi bi-sun"></i>
+            </button>
+            <button id="langToggle" class="btn btn-outline-light btn-sm rounded-pill px-2 py-0" style="font-size: 0.75rem; font-weight: 600; border-color: var(--color-border-strong); color: var(--color-text); background: transparent;">EN</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================== 1. HERO ==================== -->
+    <section id="inicio" class="hero-section" aria-label="Bienvenida">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7 order-2 order-lg-1">
+            <p class="eyebrow reveal-up" data-en="From imagination to development">De la imaginación al desarrollo</p>
+            <h1 class="hero-title reveal-up" data-en="Hi, I'm<br><span class=&quot;hero-name&quot;>Carlos Zeta</span>">Hola, soy<br><span class="hero-name">Carlos Zeta</span></h1>
+            <p class="hero-subtitle reveal-up" data-en="Limits exist only in your imagination. As a developer, I transform ideas into efficient, high-performance web applications, focusing on user experience and scalability. Think like the user.">
+              Los límites están en tu imaginación. Como desarrollador transformo esas ideas en aplicaciones 
+              web eficientes y de alto rendimiento, con un enfoque en la experiencia del usuario y la escalabilidad. Piensa como el usuario.
+            </p>
+            <div class="hero-actions reveal-up">
+              <a href="#proyectos" class="btn btn-outline-light btn-elegant" data-en="View projects">Ver proyectos</a>
+              <a href="./assets/docs/CV_2021001.pdf" id="cvLink" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-elegant" data-en="View my CV <i class=&quot;bi bi-box-arrow-up-right ms-1&quot;></i>">Ver mi CV <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+              <a href="#contacto" class="btn btn-link btn-text-link" data-en="Contact me <i class=&quot;bi bi-arrow-down-right&quot;></i>">Contáctame <i class="bi bi-arrow-down-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 text-center">
+            <div class="portrait-frame reveal-fade">
+              <!-- Fotografía de perfil profesional en blanco y negro -->
+              <img src="./assets/img/me.jpeg"
+                   alt="Retrato profesional de Carlos Zeta en blanco y negro" class="portrait-img" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#sobre-mi" class="scroll-cue" aria-label="Desplázate hacia abajo">
+        <span class="scroll-cue-line"></span>
+      </a>
+    </section>
+
+    <!-- ==================== 2. SOBRE MÍ ==================== -->
+    <section id="sobre-mi" class="section-block scroll-reveal" aria-labelledby="sobre-mi-titulo">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <p class="eyebrow" data-en="About me">Sobre mí</p>
+            <h2 id="sobre-mi-titulo" class="section-title" data-en="Junior Developer<br>Freelance">Junior Developer<br>Freelance</h2>
+          </div>
+          <div class="col-lg-8">
+            <p class="lead-text" data-en="I am a junior developer, my focus is building applications of any kind but above all high performance and quality. My goal is to grow as a freelance professional, offering clean, scalable solutions designed to solve real problems, combined with good development practices and a user-centric approach. Performing with efficiency, quality, but above all taking care of every little detail, from programming to customer service.">
+              Soy un desarrollador junior, mi enfoque es construir aplicaciones de cualquier tipo pero sobre todo de alto rendimiento
+              y calidad. Mi meta es crecer como profesional freelance, ofreciendo soluciones limpias, escalables y pensadas para resolver
+              problemas reales, combinando con buenas prácticas de desarrollo y un enfoque centrado en el usuario. Desempeñando la eficiencia,
+              calidad pero sobre todo cuidando cada pequeño detalle, desde la programación hasta el trato con el cliente.
+            </p>
+            <div class="row about-facts gy-4 mt-4">
+              <div class="col-sm-4">
+                <span class="fact-label" data-en="Age">Edad</span>
+                <span class="fact-value" data-en="19 years old">19 años</span>
+              </div>
+              <div class="col-sm-4">
+                <span class="fact-label" data-en="Status">Estado</span>
+                <span class="fact-value" data-en="In constant training">En formación constante</span>
+              </div>
+              <div class="col-sm-4">
+                <span class="fact-label">Contacto</span>
+                <a class="fact-value fact-link" href="mailto:carlosze1314@gmail.com">carlosze1314@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. HABILIDADES TÉCNICAS ==================== -->
+    <section id="habilidades" class="section-block section-block-alt scroll-reveal" aria-labelledby="habilidades-titulo">
+      <div class="container">
+        <p class="eyebrow" data-en="Technical Stack">Stack técnico</p>
+        <h2 id="habilidades-titulo" class="section-title mb-5" data-en="Skills">Skills</h2>
+
+        <div class="row gy-5 gx-5">
+          <!-- Frontend -->
+          <div class="col-md-6">
+            <h3 class="mb-4" style="font-size: 1.5rem; color: var(--color-white);" data-en="Frontend">Frontend</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-html5-plain" style="margin-right: 5px;"></i> HTML</span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel HTML">
+                  <div class="skill-fill" style="--value:90%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-css3-plain" style="margin-right: 5px;"></i> CSS</span><span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel CSS">
+                  <div class="skill-fill" style="--value:85%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-javascript-plain" style="margin-right: 5px;"></i> JavaScript</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel JavaScript">
+                  <div class="skill-fill" style="--value:80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-react-original" style="margin-right: 5px;"></i> React</span><span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel React">
+                  <div class="skill-fill" style="--value:75%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-box-seam" style="margin-right: 5px;"></i> Zustand</span><span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Zustand">
+                  <div class="skill-fill" style="--value:70%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-md-6">
+            <h3 class="mb-4" style="font-size: 1.5rem; color: var(--color-white);" data-en="Backend">Backend</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-java-plain" style="margin-right: 5px;"></i> Java</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Java">
+                  <div class="skill-fill" style="--value:80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-nodejs-plain" style="margin-right: 5px;"></i> Node.js</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Node.js">
+                  <div class="skill-fill" style="--value:80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-express-original" style="margin-right: 5px;"></i> Express</span><span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Express">
+                  <div class="skill-fill" style="--value:75%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-csharp-plain" style="margin-right: 5px;"></i> C#</span><span class="skill-percent">40%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel C#">
+                  <div class="skill-fill" style="--value:40%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-dot-net-plain" style="margin-right: 5px;"></i> .NET</span><span class="skill-percent">30%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel .NET">
+                  <div class="skill-fill" style="--value:30%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Herramientas -->
+          <div class="col-md-6 mt-2">
+            <h3 class="mb-4" style="font-size: 1.5rem; color: var(--color-white);" data-en="Tools">Herramientas</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-docker-plain" style="margin-right: 5px;"></i> Docker</span><span class="skill-percent">30%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Docker">
+                  <div class="skill-fill" style="--value:30%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="devicon-git-plain" style="margin-right: 5px;"></i> Git</span><span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Git">
+                  <div class="skill-fill" style="--value:70%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3.5 SOFT SKILLS ==================== -->
+    <section id="soft-skills" class="section-block scroll-reveal" aria-labelledby="soft-skills-titulo">
+      <div class="container">
+        <p class="eyebrow" data-en="Human Skills">Habilidades Blandas</p>
+        <h2 id="soft-skills-titulo" class="section-title mb-5" data-en="Soft Skills">Soft Skills</h2>
+
+        <div class="row gy-4 gx-5">
+          <!-- Columna 1 -->
+          <div class="col-md-6">
+            <ul class="skill-list" role="list">
+              <!-- Trabajo en equipo -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-people-fill" style="margin-right: 5px;"></i> <span data-en="Teamwork">Trabajo en equipo</span></span><span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Trabajo en equipo">
+                  <div class="skill-fill" style="--value:95%"></div>
+                </div>
+              </li>
+              <!-- Comunicación -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-chat-text-fill" style="margin-right: 5px;"></i> <span data-en="Effective Communication">Comunicación Efectiva</span></span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Comunicación">
+                  <div class="skill-fill" style="--value:90%"></div>
+                </div>
+              </li>
+              <!-- Liderazgo -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-star-fill" style="margin-right: 5px;"></i> <span data-en="Leadership">Liderazgo</span></span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Liderazgo">
+                  <div class="skill-fill" style="--value:90%"></div>
+                </div>
+              </li>
+              <!-- Empatía -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-heart-fill" style="margin-right: 5px;"></i> <span data-en="Empathy">Empatía</span></span><span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Empatía">
+                  <div class="skill-fill" style="--value:95%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="col-md-6">
+            <ul class="skill-list" role="list">
+              <!-- Resolución de problemas -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-puzzle-fill" style="margin-right: 5px;"></i> <span data-en="Problem Solving">Resolución de Problemas</span></span><span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Resolución de problemas">
+                  <div class="skill-fill" style="--value:95%"></div>
+                </div>
+              </li>
+              <!-- Creatividad -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-lightbulb-fill" style="margin-right: 5px;"></i> <span data-en="Creativity & Innovation">Creatividad e Innovación</span></span><span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Creatividad">
+                  <div class="skill-fill" style="--value:85%"></div>
+                </div>
+              </li>
+              <!-- Gestión del Tiempo -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-clock-fill" style="margin-right: 5px;"></i> <span data-en="Time Management">Gestión del Tiempo</span></span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Gestión del tiempo">
+                  <div class="skill-fill" style="--value:80%"></div>
+                </div>
+              </li>
+              <!-- Adaptabilidad -->
+              <li class="skill-item">
+                <div class="skill-item-head">
+                  <span><i class="bi bi-arrows-move" style="margin-right: 5px;"></i> <span data-en="Adaptability">Adaptabilidad</span></span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Adaptabilidad">
+                  <div class="skill-fill" style="--value:90%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EDUCACIÓN Y EXPERIENCIA ==================== -->
+    <section id="trayectoria" class="section-block section-block-alt scroll-reveal" aria-labelledby="trayectoria-titulo">
+      <div class="container">
+        <p class="eyebrow" data-en="Resume">Currículum</p>
+        <h2 id="trayectoria-titulo" class="section-title mb-5" data-en="Education &amp; Experience">Educación &amp; Experiencia</h2>
+
+        <div class="row gy-5 gx-5 justify-content-between">
+          <!-- Columna Educación -->
+          <div class="col-lg-5">
+            <h3 class="mb-4" style="font-size: 1.75rem;" data-en="Education">Educación</h3>
+            <ol class="timeline" role="list">
+
+              <!-- Inicia bloque -->
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Human Education">Educación humana</span>
+                  <h4 class="timeline-title" data-en="Leadership Course">Curso de liderazgo</h4>
+                  <p class="timeline-meta" data-en="Club Juvenil Jaguar - 2023">Club Juvenil Jaguar - 2023</p>
+                  <p class="timeline-desc" data-en="Comprehensive training in leadership and personal development that enhances communication skills, teamwork, virtues, and conflict resolution.">
+                    Formación integral en liderazgo y desarrollo personal que potencia habilidades de comunicación, 
+                    trabajo en equipo, virtudes y resolución de conflictos.
+                  </p>
+                </div>
+              </li>
+
+                            <!-- Inicia bloque -->
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Human Education">Educación Humana</span>
+                  <h4 class="timeline-title" data-en="The Mark">The Mark</h4>
+                  <p class="timeline-meta" data-en="CCN - 2022 to 2023">CCN - 2022 a 2023</p>
+                  <p class="timeline-desc" data-en="Course in developing leadership skills, effective communication, and personal development, focusing on decision-making and applying ethical values in professional environments.">
+                    Curso en formación de competencias de liderazgo, comunicación efectiva y desarrollo personal, 
+                    con enfoque en la toma de decisiones y aplicación de valores éticos en entornos profesionales.
+                  </p>
+                </div>
+              </li>
+              
+              <!-- Inicia bloque -->
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Academic Education">Educación Acádemica</span>
+                  <h4 class="timeline-title" data-en="English Courses">Cursos en inglés</h4>
+                  <p class="timeline-meta" data-en="IGA - 2016 to 2018">IGA - 2016 a 2018</p>
+                  <p class="timeline-desc" data-en="English learning with a focus on oral and written communication, reading comprehension, and basic linguistic skills development. Currently meeting the requirements to understand any IDE, documentation, and English tutorials.">
+                    Aprendizaje de inglés con enfoque en comunicación oral y escrita, comprensión de textos y desarrollo de habilidades 
+                    lingüísticas de forma básica, en la actualidad cumpliendo lo necesario para entender cualquier IDE, documentación y tutoriales en inglés.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Inicia bloque -->
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Formal Education">Educación Formal</span>
+                  <h4 class="timeline-title" data-en="Technical Degree in Programming">Perito Técnico en Programación</h4>
+                  <p class="timeline-meta" data-en="Centro Educativo Técnico Laboral Kinal — Class of 2026">Centro Educativo Técnico Laboral Kinal — Promoción 2026</p>
+                  <p class="timeline-desc" data-en="Comprehensive training in software development, databases, and applied engineering fundamentals, with practical industry-oriented projects.">
+                    Formación integral en desarrollo de software, bases de datos y fundamentos de
+                    ingeniería aplicada, con proyectos prácticos orientados a la industria.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Inicia bloque -->
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Ongoing">En curso</span>
+                  <h4 class="timeline-title" data-en="Continuous Self-Learning">Autoformación continua</h4>
+                  <p class="timeline-meta" data-en="Courses and personal projects">Cursos y proyectos personales</p>
+                  <p class="timeline-desc" data-en="Constant deepening in React, backend architecture with Node.js, and a preference for frontend development.">
+                    Profundización constante en React, arquitectura backend con Node.js y
+                    preferencia a lo que es frontend.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Columna Experiencia -->
+          <div class="col-lg-5 offset-lg-1">
+            <h3 class="mb-4" style="font-size: 1.75rem;" data-en="Experience">Experiencia</h3>
+            <ol class="timeline" role="list">
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Manager">Gerente</span>
+                  <h4 class="timeline-title" data-en="Youth Club Manager">Gerente de un club para jóvenes</h4>
+                  <p class="timeline-meta" data-en="Club Juvenil Jaguar - 2025 to 2026">Club Juvenil Jaguar - 2025 a 2026</p>
+                  <p class="timeline-desc" data-en="In charge of leading a youth team, planning activities, and promoting the personal and social development of club members.">
+                    Encargado de liderar un equipo de jóvenes, planificar actividades y fomentar el desarrollo personal y social de los miembros del club.
+                  </p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Course Director">Director curso</span>
+                  <h4 class="timeline-title" data-en="Director of youth summer courses">Director curso de vacaciones para jóvenes</h4>
+                  <p class="timeline-meta" data-en="Club Juvenil Jaguar - 2023 to 2025">Club Juvenil Jaguar - 2023 a 2025</p>
+                  <p class="timeline-desc" data-en="In charge of coordinating and supervising a youth vacation course, designing educational and recreational activities that promote learning, human development, and fun.">
+                    Encargado de coordinar y supervisar un curso de vacaciones para jóvenes, diseñando actividades educativas
+                    y recreativas que promuevan el aprendizaje, desarrollo humano y la diversión.
+                  </p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Teacher">Profesor</span>
+                  <h4 class="timeline-title" data-en="Religion - Math - Physics Teacher">Profesor de Religión - Matemáticas - Física</h4>
+                  <p class="timeline-meta" data-en="Club Juvenil Jaguar / Kinal - 2022 to present">Club Juvenil Jaguar/Kinal - 2022 a actualidad</p>
+                  <p class="timeline-desc" data-en="Teaching religion, mathematics, and physics to youth, developing pedagogical skills and fostering an interest in learning across various fields of knowledge.">
+                    Impartición de clases de religión, matemáticas y física a jóvenes, desarrollando habilidades pedagógicas
+                    y fomentando el interés por el aprendizaje en diversas áreas del conocimiento.
+                  </p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-tag" data-en="Internship">Prácticas</span>
+                  <h4 class="timeline-title" data-en="Software Development Internship">Prácticas de Desarrollo de Software</h4>
+                  <p class="timeline-meta" data-en="Applied Practical Training">Formación práctica aplicada</p>
+                  <p class="timeline-desc" data-en="Participation in web development projects focused on building functional interfaces, integrating APIs, and applying team version control.">
+                    Participación en proyectos de desarrollo web enfocados en construir interfaces
+                    funcionales, integrar APIs y aplicar control de versiones en equipo.
+                  </p>
+                </div>
+              </li>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PORTAFOLIO DETALLADO ==================== -->
+    <section id="proyectos" class="section-block scroll-reveal" aria-labelledby="proyectos-titulo">
+      <div class="container">
+        <p class="eyebrow" data-en="Portfolio">Portafolio</p>
+        <h2 id="proyectos-titulo" class="section-title mb-5" data-en="Featured Projects">Proyectos Destacados</h2>
+
+        <div class="row gy-4">
+
+          <!-- Proyecto 1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-card-media">
+                <div id="carouselFeelWeell" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <img src="./assets/img/LogoFeelWeell.png" alt="Captura del logo del proyecto FeelWeell">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/dashF.jpg" alt="Dashboard de FeelWeell">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/EjerciciosF.jpg" alt="Administración de ejercicios en FeelWeell">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/ContenidoF.jpg" alt="Gestión de contenido en FeelWeell">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeelWeell" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselFeelWeell" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">FeelWeell</h3>
+                <p class="project-card-desc" data-en="Application to manage and improve emotional well-being through exercises and personalized tracking.">
+                  Aplicación para gestionar y mejorar el bienestar emocional a través de ejercicios y seguimiento personalizado.
+                </p>
+                <ul class="project-badges" role="list">
+                  <li class="badge-tech">Node.js</li>
+                  <li class="badge-tech">C#</li>
+                  <li class="badge-tech">NET 8</li>
+                  <li class="badge-tech">RabbitMQ</li>
+                  <li class="badge-tech">OpenAI SDK</li>
+                  <li class="badge-tech">Docker</li>
+                </ul>
+                <a href="https://github.com/jzeta-2021001/FeelWeell.git" class="btn btn-outline-light btn-elegant btn-sm" data-en="View on GitHub">Ver en GitHub</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-card-media">
+                <div id="carouselChapinBank" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <img src="./assets/img/LogoChapinBank.png" alt="Captura del logo del proyecto ChapinBank">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/dashC.jpg" alt="Dashboard administrativo bancario">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/addC.jpg" alt="Captura de agregar elemento en ChapinBank">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/movimentsC.jpg" alt="Captura de movimientos en ChapinBank">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselChapinBank" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselChapinBank" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">ChapinBank</h3>
+                <p class="project-card-desc" data-en="Banking application with account management, transfer, and advanced security functionalities.">
+                  Aplicación bancaria con funcionalidades de gestión de cuentas, transferencias y seguridad avanzada.
+                </p>
+                <ul class="project-badges" role="list">
+                  <li class="badge-tech">Node.js</li>
+                  <li class="badge-tech">C#</li>
+                  <li class="badge-tech">NET 8</li>
+                  <li class="badge-tech">Docker</li>
+                  <li class="badge-tech">MongoDB</li>
+                </ul>
+                <div class="d-flex gap-2 flex-wrap mt-auto pt-3">
+                  <a href="https://github.com/dmarroquin-2024108/ChapinBank.git" class="btn btn-outline-light btn-elegant btn-sm" data-en="View on GitHub">Ver en GitHub</a>
+                  <a href="https://chapin-bank.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-elegant btn-sm" style="background-color: var(--color-white); color: var(--color-bg); font-weight: 500;" data-en="Live Demo <i class=&quot;bi bi-box-arrow-up-right ms-1&quot;></i>">Ver en Vivo <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-card-media">
+                <div id="carouselDebuggersEats" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <img src="./assets/img/LogoDebuggersEats.png" alt="Captura del logo del proyecto Debuggers Eats">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/eventsD.jpg" alt="Eventos en Debuggers Eats">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./assets/img/tablesD.jpg" alt="Gestión de mesas en Debuggers Eats">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDebuggersEats" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselDebuggersEats" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">Debuggers Eats</h3>
+                <p class="project-card-desc" data-en="Food delivery platform with an order management system and real-time tracking.">
+                  Plataforma de delivery de comida con sistema de gestión de pedidos y seguimiento en tiempo real.
+                </p>
+                <ul class="project-badges" role="list">
+                  <li class="badge-tech">Node.js</li>
+                  <li class="badge-tech">C#</li>
+                  <li class="badge-tech">NET 8</li>
+                  <li class="badge-tech">Docker</li>
+                  <li class="badge-tech">MongoDB</li>
+                </ul>
+                <a href="https://github.com/elopez-2021393/DebuggersEats.git" class="btn btn-outline-light btn-elegant btn-sm" data-en="View on GitHub">Ver en GitHub</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACTO Y REDES (FOOTER) ==================== -->
+    <footer id="contacto" class="footer-section scroll-reveal" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-5">
+            <p class="eyebrow" data-en="Let's work together">Trabajemos juntos</p>
+            <h2 id="contacto-titulo" class="section-title" data-en="Let's Connect">Conectemos</h2>
+            <p class="lead-text" data-en="I am open to opportunities as a freelance developer and to talk with recruiters. If my profile fits what you are looking for, write to me.">
+              Estoy abierto a oportunidades como desarrollador freelance y a conversar con
+              reclutadores. Si mi perfil encaja con lo que buscas, escríbeme.
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/carlos-zeta-cz007" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+              <a href="https://github.com/jzeta-2021001" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="bi bi-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="https://formspree.io/f/mpqvjbeg" method="POST" id="contactForm" class="contact-form" novalidate>
+              <div class="form-floating-line mb-4">
+                <input type="text" class="form-control-line" id="nombre" name="Nombre" placeholder=" " required>
+                <label for="nombre" data-en="Name">Nombre</label>
+              </div>
+              <div class="form-floating-line mb-4">
+                <input type="email" class="form-control-line" id="correo" name="Correo" placeholder=" " required>
+                <label for="correo" data-en="Email">Correo</label>
+              </div>
+              <div class="form-floating-line mb-4">
+                <textarea class="form-control-line" id="mensaje" name="Mensaje" rows="4" placeholder=" " required></textarea>
+                <label for="mensaje" data-en="Message">Mensaje</label>
+              </div>
+              <div class="mt-4">
+                <button type="submit" id="contactSubmit" class="btn btn-outline-light btn-elegant" data-en="Send message">Enviar mensaje</button>
+              </div>
+              <div id="contactStatus" class="mt-3" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Carlos Zeta. <span data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==================== MODAL PARA IMÁGENES (LIGHTBOX) ==================== -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 position-relative text-center">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index: 1055;"></button>
+          <img id="modalImage" src="" class="img-fluid rounded shadow-lg" alt="" style="max-height: 90vh; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script propio -->
+  <script src="script.js"></script>
+</body>
+</html>
