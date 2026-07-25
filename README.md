@@ -77,7 +77,7 @@ Como es un sitio 100% estático, puedes desplegarlo en cualquiera de estas opcio
 2. Netlify generará una URL pública al instante.
 
 ### Vercel
-1. Instala la CLI: `npm i -g vercel`.
+1. Instala la CLI: `pnpm i -g vercel`.
 2. Dentro de la carpeta del proyecto, ejecuta `vercel`.
 3. Sigue las instrucciones en pantalla.
 
